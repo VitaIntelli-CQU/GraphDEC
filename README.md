@@ -1,6 +1,8 @@
 # GraphDec
 
-Introduction (Waiting for update).
+GraphDEC, a graph neural network-based tool for deconvoluting proteomics data.
+
+![model.jpg](https://github.com/VitaIntelli-CQU/GraphDEC/blob/main/model.jpg)
 
 ## Installation  
 
