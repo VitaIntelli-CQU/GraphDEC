@@ -4,15 +4,21 @@ GraphDEC, a graph neural network-based tool for deconvoluting proteomics data.
 
 ![model.jpg](https://github.com/VitaIntelli-CQU/GraphDEC/blob/main/model.jpg)
 
-## Installation  
+## Installation
 
-We recommend using Anaconda to create a new Python environment and activate it via
+### Conda (Recommended)
 
-```
+We recommend using **Anaconda** to create and manage the Python environment. To set up the environment, run the following commands:
+
+```bash
 conda env create -f GraphDec_env.yaml
 conda activate GraphDec_env
-pip uninstall nvidia-cublas-cu11         # Perhaps this command needs to be executed.
+pip uninstall nvidia-cublas-cu11  # You may need to run this command depending on your system setup.
 ```
+
+### Docker
+
+Instructions for setting up the environment using **Docker** will be provided soon.
 
 ## Quick Start
 
