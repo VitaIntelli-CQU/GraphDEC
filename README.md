@@ -18,7 +18,13 @@ pip uninstall nvidia-cublas-cu11  # You may need to run this command depending o
 
 ### Docker
 
-Instructions for setting up the environment using **Docker** will be provided soon.
+We provide Docker images, processed HBreast_CYTOF data, and example files for running. You can execute the following code for simple installation and execution:
+
+```bash
+docker pull crpi-4pq8xgwdyvc1i5wt.cn-shenzhen.personal.cr.aliyuncs.com/graphdec_docker/graphdec_docker:1.2
+sudo docker run --gpus all -it --name dc2 -p 6166:6166/tcp -v /app --shm-size 10240m graphdec:1.2 /bin/bash
+python train.py
+```
 
 ## Quick Start
 
@@ -47,7 +53,7 @@ If you want to accurately reproduce the results in the paper, **use NVIDIA GeFor
 
 ## Tutorial
 
-### Tutorial 1: Cell abundance prediction on CyTOF proteome dataset
+### Tutorial 1: Cell abundance prediction on HBreast_CYTOF proteome dataset
 
 1. Download the compressed file Primary_All_Lin.zip from [the URL](https://data.mendeley.com/datasets/vs8m5gkyfn/1), and then decompress and extract the file `Final_Primary_All_Lin.h5ad`.
 
@@ -55,7 +61,7 @@ If you want to accurately reproduce the results in the paper, **use NVIDIA GeFor
 
 3. Refer to or directly execute [tutorial/CyTOF_Tutorial.ipynb](https://github.com/VitaIntelli-CQU/GraphDEC/tree/main/tutorial/CyTOF_Tutorial.ipynb).
 
-### Tutorial 2: Cell abundance prediction from Rheus_macaques_ifgn proteome dataset to Human_ifgn proteome dataset
+### Tutorial 2: Cell abundance prediction from Ifrhesus proteome dataset to IFHuman proteome dataset
 
 1. Download the files `Rheus_macaques_ifgn.h5ad` and `Human_ifgn.h5ad` from [the URL](https://github.com/single-cell-proteomic/SCPRO-HI/tree/main/Data/cross-species).
 
