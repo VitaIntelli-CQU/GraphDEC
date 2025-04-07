@@ -22,7 +22,8 @@ We provide Docker images, processed HBreast_CYTOF data, and example files for ru
 
 ```bash
 docker pull crpi-4pq8xgwdyvc1i5wt.cn-shenzhen.personal.cr.aliyuncs.com/graphdec_docker/graphdec_docker:1.2
-sudo docker run --gpus all -it --name dc2 -p 6166:6166/tcp -v /app --shm-size 10240m graphdec:1.2 /bin/bash
+docker tag crpi-4pq8xgwdyvc1i5wt.cn-shenzhen.personal.cr.aliyuncs.com/graphdec_docker/graphdec_docker:1.2 graphdec:1.2
+docker run --gpus all -it --name dc2 -p 6166:6166/tcp -v /app --shm-size 10240m graphdec:1.2 /bin/bash
 python train.py
 ```
 
